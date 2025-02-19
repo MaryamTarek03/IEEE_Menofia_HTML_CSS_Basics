@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Preahvihear&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+
+:root {
+  --text: #ebe9fc;
+  --background: #0f0f0f;
+  --primary: #7100c2;
+  --secondary: #1b1b1b;
+  --accent: #fffc5d;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 5rem;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--background);
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  color: var(--text);
+}
+
+.container {
+  margin-left: 4rem;
+}
+
+.logo {
+  font-family: "Preahvihear", sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box {
+  background: var(--secondary);
+  width: 46%;
+  height: 80%;
+  color: var(--text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 97vh;
+}
+
+.header {
+  /* position: fixed; */
+  /* height: 3rem; */
+  background: var(--secondary);
+  /* display: flex; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3rem;
+  background: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.3rem; /* 8px */
+  color: #ffffff;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-linear;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+.sidebar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3rem;
+  width: 3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  border-radius: 1.5rem;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-linear;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background: var(--primary);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-linear;
+  border-radius: 0.75rem;
+}
+
+.sidebar-item i {
+  font-size: 1.3rem;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-linear;
+}
+
+.sidebar-item:hover i {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-linear;
+  transform: scale(1.2);
+}
