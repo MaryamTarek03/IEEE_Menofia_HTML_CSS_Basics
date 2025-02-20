@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <!-- <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css" /> -->
     <link
       rel="stylesheet"
@@ -13,6 +12,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Home</title>
   </head>
   <body>
@@ -22,7 +26,7 @@
           ><div class="sidebar-item">
             <i class="fa-solid fa-house"></i></div
         ></a>
-        <a href="#category"
+        <a href="#categories"
           ><div class="sidebar-item">
             <i class="fa-solid fa-icons"></i></div
         ></a>
@@ -32,7 +36,7 @@
         ></a>
         <a href="#"
           ><div class="sidebar-item">
-            <i class="fa-solid fa-cloud"></i></div
+            <i class="fa-solid fa-user"></i></div
         ></a>
         <a href="#contact"
           ><div class="sidebar-item">
@@ -46,14 +50,60 @@
           <div class="logo">
             <h1>Game Vault</h1>
           </div>
+          <h1>Discover the best games</h1>
         </div>
         <div class="box">
-          <h2>Discover the best games</h2>
-          <p>
-            The best games are here, you can find the best games for your
-            console or PC
-          </p>
+          <img src="assets/images/winner.png" alt="" />
         </div>
+      </section>
+    </div>
+    <div class="container">
+      <section class="categories" id="categories">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <img src="https://cdn3.whatculture.com/images/2020/12/3cc98eaccf6b9521-1200x675.jpg" alt="" />
+            <div class="share">
+              <h1>Platformers</h1>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/console.png" alt="" />
+            <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a
+              ><a href="#" class="fab fa-twitter"></a
+            ><a href="#" class="fab fa-instagram"></a
+            ><a href="#" class="fab fa-linkedin"></a>
+            </div>
+            <h3>Alexander Bennett</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/images/card-game.png" alt="" />
+            <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a
+              ><a href="#" class="fab fa-twitter"></a
+            ><a href="#" class="fab fa-instagram"></a
+            ><a href="#" class="fab fa-linkedin"></a>
+            </div>
+            <h3>Alexander Bennett</h3>
+          </div>
+          <div class="swiper-slide"></div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <section class="contact" id="contact">
+        <form action="">
+          <h2>Contact Us</h2>
+          <div class="inputBox">
+            <input type="text" placeholder="Your Name" />
+            <br>
+            <input type="text" placeholder="Your Email" />
+            <br>
+            <input type="text" placeholder="Subject" />
+            <br>
+            <input type="submit" value="Send Message" />
+          </div>
+        </form>
       </section>
     </div>
   </body>
