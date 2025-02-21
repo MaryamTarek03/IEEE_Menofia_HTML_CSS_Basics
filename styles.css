@@ -45,16 +45,24 @@ html {
   font-family: "Montserrat Alternates", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
 }
 
 body {
   background: var(--background);
   padding: 0;
+  color: var(--text);
 }
 
 .container {
-  margin: 0 8rem 0 10rem;
+  margin: 0 8rem 0 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 span {
+  color: var(--accent);
+  font-size: 3rem;
 }
 
 .logo {
@@ -87,18 +95,8 @@ body {
   /*background: var(--secondary);*/
 }
 
-.home {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 97vh;
-}
-
 .header {
-  /* position: fixed; */
-  /* height: 3rem; */
   background: var(--secondary);
-  /* display: flex; */
   justify-content: space-around;
   align-items: center;
 }
@@ -107,9 +105,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 98%;
   width: 4rem;
   background: var(--secondary);
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,6 +116,7 @@ body {
   color: #ffffff;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+  border-radius: 0.5rem;
 }
 
 .sidebar a {
@@ -159,73 +159,98 @@ body {
   transform: scale(1.2);
 }
 
-.categories {
+.section {
   transition: 0.3s ease-out;
+  height: 100vh;
 }
 
-.categories .slide {
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categories .slides .slide {
   position: relative;
   overflow: hidden;
   margin-bottom: 4rem;
-  user-select: none;
+  transition: 0.3s ease-out;
+  border-radius: 1rem;
+  margin-top: 4rem;
 }
 
-.categories .slide:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
+.slides .slide img {
   width: 100%;
-  height: 55rem;
-  transition: 0.3s ease-out;
-  background-color: var(--hover);
-  /* Semi-transparent green */
-  z-index: 1;
-  /* Ensure the overlay is above the image */
-  border-radius: 0.5rem;
-  /* Optional: add border-radius to match image */
+  display: block;
+  filter: saturate(0.7);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.slides .gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(115% 120% at 0% 0%, transparent, var(--hover));
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slide .label_ctn {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.slide .label {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  letter-spacing: 0.1ch;
+  color: var(--primary);
+  text-transform: uppercase;
+  background: var(--accent);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.slide:hover .gradient {
+  opacity: 0.5;
+}
+
+.slide:hover .label_ctn {
+  transform: translateY(44px);
 }
 
 .categories .slide img {
-  height: 50%;
-  width: 100%;
+  height: 40vh;
+  width: 40vh;
   object-fit: cover;
   border-radius: .5rem;
-}
-
-.categories .slide h3 {
-  margin-top: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: var(--white);
-}
-
-.categories .slide .share {
-  position: absolute;
-  top: 1rem;
-  left: -10rem;
-  z-index: 100;
-}
-
-.categories .slide:hover .share {
-  left: 2rem;
-}
-
-.categories .slide .share a {
-  display: block;
-  
-  margin-top: 1rem;
-  height: 4.5rem;
-  width: 4.5rem;
-  line-height: 4.5rem;
-  border-radius: .5rem;
-  background-color: var(--white);
-  color: var(--black);
-  text-align: center;
-  font-size: 2rem;
-}
-
-.categories .slide .share a:hover {
-  background-color: var(--accent);
-  color: var(--white);
 }
